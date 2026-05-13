@@ -35,7 +35,8 @@ def check_rmi(target, port=1099):
         sock.close()
 
 if __name__ == "__main__":
-    if len(sys.argv)  [port]")
+    if len(sys.argv) < 2:
+        print("Usage: python rmi_check.py <target> [port]")
         sys.exit(1)
     target = sys.argv[1]
     port = int(sys.argv[2]) if len(sys.argv) > 2 else 1099
